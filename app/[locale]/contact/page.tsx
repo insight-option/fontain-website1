@@ -29,9 +29,9 @@ export default async function ContactPage({ params }: Props) {
 
   const infoCards = [
     { Icon: MessageCircle, title: c.info.whatsappTitle, text: c.info.whatsappText, href: waLink(waMessage), color: "#25D366", external: true },
-    { Icon: Mail, title: c.info.emailTitle, text: site.email, href: `mailto:${site.email}`, color: "#0B6BFF", ltr: true },
-    { Icon: Phone, title: c.info.phoneTitle, text: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}`, color: "#7C5CFF", ltr: true },
-    { Icon: MapPin, title: c.info.locationTitle, text: site.address[locale], href: site.mapsUrl, color: "#FF4D8D", external: true },
+    { Icon: Mail, title: c.info.emailTitle, text: site.email, href: `mailto:${site.email}`, color: "#00B8A9", ltr: true },
+    { Icon: Phone, title: c.info.phoneTitle, text: site.phone, href: `tel:${site.phone.replace(/\s/g, "")}`, color: "#1D7CF2", ltr: true },
+    { Icon: MapPin, title: c.info.locationTitle, text: site.address[locale], href: site.mapsUrl, color: "#0B1D33", external: true },
     { Icon: Clock, title: c.info.hoursTitle, text: site.hours[locale], color: "#F59E0B" },
   ];
 
@@ -40,8 +40,8 @@ export default async function ContactPage({ params }: Props) {
       <section className="relative overflow-hidden pt-36 pb-12 lg:pt-44">
         <div className="bg-grid absolute inset-0 -z-10" aria-hidden="true" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="blob" style={{ width: 480, height: 480, top: -220, insetInlineEnd: -140, background: "#bfe0ff" }} />
-          <div className="blob" style={{ width: 400, height: 400, top: 40, insetInlineStart: -200, background: "#dcd6ff", animationDelay: "-7s" }} />
+          <div className="blob" style={{ width: 480, height: 480, top: -220, insetInlineEnd: -140, background: "#c9e9ff" }} />
+          <div className="blob" style={{ width: 400, height: 400, top: 40, insetInlineStart: -200, background: "#c6f1ec", animationDelay: "-7s" }} />
         </div>
         <div className="container-x">
           <SectionHeading as="h1" eyebrow={c.eyebrow} title={c.title} subtitle={c.subtitle} align="start" />

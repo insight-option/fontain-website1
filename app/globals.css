@@ -2,20 +2,26 @@
 
 /* ---------- Design tokens ---------- */
 @theme {
+  /* Brand palette (from the Fontain identity sheet): Midnight Navy, Teal, Electric Cyan, Soft Off-White, Cool Gray */
   --color-bg: #ffffff;
-  --color-surface: #f5f7fb;
-  --color-surface-2: #eef2f9;
-  --color-ink: #0b1220;
-  --color-ink-2: #1f2a3d;
-  --color-muted: #5b6578;
-  --color-line: #e6eaf2;
+  --color-surface: #f7f9fb;
+  --color-surface-2: #eef3f7;
+  --color-ink: #0b1d33;
+  --color-ink-2: #1f3650;
+  --color-muted: #5f6f82;
+  --color-line: #e3e9f0;
 
-  --color-brand: #0b6bff;
-  --color-brand-600: #0656d6;
-  --color-aqua: #00d1ff;
-  --color-violet: #7c5cff;
-  --color-pink: #ff4d8d;
-  --color-mint: #00b8a9;
+  --color-navy: #0b1d33;
+  --color-navy-2: #15375c;
+  --color-teal: #00b8a9;
+  --color-cyan: #00d4ff;
+  --color-blue: #1d7cf2;
+  /* "brand" is the accessible teal used for small text, links and focus rings (#087A71 ≈ 5.2:1 on white) */
+  --color-brand: #087a71;
+  --color-brand-600: #06655e;
+  --color-aqua: #00d4ff;
+  --color-amber: #f59e0b;
+  --color-pink: #e0245e;
   --color-whatsapp: #25d366;
 
   --font-sans: var(--font-en), ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
@@ -26,8 +32,8 @@
   --radius-2xl: 1.75rem;
   --radius-3xl: 2.25rem;
 
-  --shadow-soft: 0 1px 2px rgb(11 18 32 / 0.04), 0 12px 40px -12px rgb(11 18 32 / 0.12);
-  --shadow-lift: 0 2px 4px rgb(11 18 32 / 0.04), 0 24px 60px -16px rgb(11 107 255 / 0.25);
+  --shadow-soft: 0 1px 2px rgb(11 29 51 / 0.04), 0 12px 40px -12px rgb(11 29 51 / 0.12);
+  --shadow-lift: 0 2px 4px rgb(11 29 51 / 0.04), 0 24px 60px -16px rgb(0 184 169 / 0.28);
 
   --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
   --ease-spring: cubic-bezier(0.2, 0.9, 0.25, 1.2);
@@ -62,7 +68,7 @@
     overflow-x: clip;
   }
   ::selection {
-    background: color-mix(in oklab, var(--color-brand) 20%, white);
+    background: color-mix(in oklab, var(--color-teal) 25%, white);
     color: var(--color-ink);
   }
   :focus-visible {
@@ -91,7 +97,7 @@
 }
 
 @utility text-gradient {
-  background-image: linear-gradient(92deg, var(--color-brand) 0%, var(--color-aqua) 50%, var(--color-violet) 100%);
+  background-image: linear-gradient(92deg, var(--color-brand) 0%, var(--color-teal) 45%, var(--color-cyan) 100%);
   -webkit-background-clip: text;
   background-clip: text;
   color: transparent;
@@ -113,15 +119,15 @@
 
 @utility bg-grid {
   background-image:
-    linear-gradient(to right, rgb(11 18 32 / 0.05) 1px, transparent 1px),
-    linear-gradient(to bottom, rgb(11 18 32 / 0.05) 1px, transparent 1px);
+    linear-gradient(to right, rgb(11 29 51 / 0.05) 1px, transparent 1px),
+    linear-gradient(to bottom, rgb(11 29 51 / 0.05) 1px, transparent 1px);
   background-size: 56px 56px;
   -webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 30%, transparent 100%);
   mask-image: radial-gradient(ellipse 70% 60% at 50% 20%, black 30%, transparent 100%);
 }
 
 @utility bg-dots {
-  background-image: radial-gradient(rgb(11 18 32 / 0.08) 1px, transparent 1px);
+  background-image: radial-gradient(rgb(11 29 51 / 0.08) 1px, transparent 1px);
   background-size: 22px 22px;
 }
 
@@ -148,8 +154,8 @@
   /* Buttons */
   .btn-primary {
     @apply btn text-white;
-    background: linear-gradient(135deg, var(--color-brand) 0%, var(--color-brand-600) 100%);
-    box-shadow: 0 10px 30px -10px rgb(11 107 255 / 0.6), inset 0 1px 0 rgb(255 255 255 / 0.25);
+    background: linear-gradient(135deg, var(--color-navy-2) 0%, var(--color-navy) 100%);
+    box-shadow: 0 10px 30px -10px rgb(11 29 51 / 0.55), inset 0 1px 0 rgb(255 255 255 / 0.12);
     overflow: hidden;
     isolation: isolate;
   }
@@ -157,7 +163,7 @@
     content: "";
     position: absolute;
     inset: 0;
-    background: linear-gradient(115deg, transparent 30%, rgb(255 255 255 / 0.35) 50%, transparent 70%);
+    background: linear-gradient(115deg, transparent 30%, rgb(0 212 255 / 0.35) 50%, transparent 70%);
     transform: translateX(-120%);
     transition: transform 0.9s var(--ease-out-expo);
     z-index: -1;
@@ -167,7 +173,7 @@
   }
   .btn-primary:hover {
     transform: translateY(-2px);
-    box-shadow: 0 18px 40px -12px rgb(11 107 255 / 0.65), inset 0 1px 0 rgb(255 255 255 / 0.25);
+    box-shadow: 0 18px 40px -12px rgb(0 184 169 / 0.55), inset 0 1px 0 rgb(255 255 255 / 0.12);
   }
   .btn-primary:hover::after {
     transform: translateX(120%);
@@ -185,7 +191,7 @@
     box-shadow: 0 1px 2px rgb(11 18 32 / 0.04);
   }
   .btn-secondary:hover {
-    border-color: color-mix(in srgb, var(--color-brand) 40%, var(--color-line));
+    border-color: color-mix(in srgb, var(--color-teal) 50%, var(--color-line));
     box-shadow: var(--shadow-soft);
     transform: translateY(-2px);
   }
@@ -221,7 +227,7 @@
   .card:hover {
     transform: translateY(-4px);
     box-shadow: var(--shadow-lift);
-    border-color: color-mix(in srgb, var(--color-brand) 25%, var(--color-line));
+    border-color: color-mix(in srgb, var(--color-teal) 35%, var(--color-line));
   }
 
   /* Spotlight (pointer-following glow) */
@@ -240,7 +246,7 @@
     transition: opacity 0.5s ease;
     background: radial-gradient(
       420px circle at var(--mx) var(--my),
-      color-mix(in srgb, var(--spot-color, var(--color-brand)) 14%, transparent),
+      color-mix(in srgb, var(--spot-color, var(--color-teal)) 16%, transparent),
       transparent 55%
     );
   }
@@ -275,8 +281,8 @@
   }
   .input:focus {
     outline: none;
-    border-color: var(--color-brand);
-    box-shadow: 0 0 0 4px rgb(11 107 255 / 0.12);
+    border-color: var(--color-teal);
+    box-shadow: 0 0 0 4px rgb(0 184 169 / 0.15);
   }
   .label {
     @apply mb-1.5 block text-sm font-medium text-ink-2;
@@ -433,7 +439,7 @@ html[dir="rtl"] .marquee-track {
   inset: -1px;
   border-radius: inherit;
   padding: 1px;
-  background: conic-gradient(from 210deg, var(--color-brand), var(--color-aqua), var(--color-violet), var(--color-pink), var(--color-brand));
+  background: conic-gradient(from 210deg, var(--color-teal), var(--color-cyan), var(--color-blue), var(--color-navy-2), var(--color-teal));
   -webkit-mask:
     linear-gradient(#000 0 0) content-box,
     linear-gradient(#000 0 0);
@@ -449,7 +455,7 @@ html[dir="rtl"] .marquee-track {
 
 /* Underline sweep for headline accent */
 .underline-sweep {
-  background-image: linear-gradient(90deg, var(--color-aqua), var(--color-brand));
+  background-image: linear-gradient(90deg, var(--color-cyan), var(--color-teal));
   background-repeat: no-repeat;
   background-size: 100% 0.18em;
   background-position: 0 92%;

@@ -6,7 +6,7 @@ import Footer from "@/components/Footer";
 import JsonLd from "@/components/JsonLd";
 import { getDictionary } from "@/lib/i18n";
 import { revealScript } from "@/lib/reveal-script";
-import { siteUrl } from "@/lib/seo";
+import { ogImage, siteUrl } from "@/lib/seo";
 import { dirOf, isLocale, locales, site, type Locale } from "@/lib/site";
 import "../globals.css";
 
@@ -47,7 +47,9 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
       type: "website",
       siteName: locale === "ar" ? site.nameAr : site.name,
       locale: locale === "ar" ? "ar_QA" : "en_US",
+      images: [ogImage],
     },
+    twitter: { card: "summary_large_image", images: ["/twitter-image.png"] },
   };
 }
 

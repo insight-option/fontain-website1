@@ -8,7 +8,7 @@ export default function Marquee({ items, duration = 45 }: { items: readonly stri
         {list.map((item, i) => (
           <span key={i} className="flex items-center whitespace-nowrap text-sm font-semibold tracking-wide text-ink-2">
             <span className="px-6">{item}</span>
-            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-brand to-aqua" />
+            <span className="h-1.5 w-1.5 rounded-full bg-gradient-to-r from-teal to-cyan" />
           </span>
         ))}
       </div>

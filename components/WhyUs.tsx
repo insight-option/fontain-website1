@@ -1,13 +1,15 @@
+import Image from "next/image";
 import { BarChart3, Layers, MapPin, ShieldCheck, Sparkles, Zap } from "lucide-react";
 import Reveal from "./Reveal";
 import SectionHeading from "./SectionHeading";
 import SpotlightGroup from "./SpotlightGroup";
 import type { Dictionary } from "@/lib/i18n";
+import type { Locale } from "@/lib/site";
 
 const icons = [Layers, Sparkles, MapPin, BarChart3, Zap, ShieldCheck];
-const colors = ["#0B6BFF", "#7C5CFF", "#00B8A9", "#FF4D8D", "#F59E0B", "#00D1FF"];
+const colors = ["#00B8A9", "#1D7CF2", "#0B1D33", "#00D4FF", "#F59E0B", "#15375C"];
 
-export default function WhyUs({ dict }: { dict: Dictionary }) {
+export default function WhyUs({ dict, locale }: { dict: Dictionary; locale: Locale }) {
   const w = dict.why;
   return (
     <section className="relative py-24 lg:py-32">
@@ -15,6 +17,18 @@ export default function WhyUs({ dict }: { dict: Dictionary }) {
         <div className="lg:col-span-5">
           <div className="lg:sticky lg:top-32">
             <SectionHeading eyebrow={w.eyebrow} title={w.title} subtitle={w.subtitle} align="start" />
+            <Reveal from="scale" delay={150} className="mt-10">
+              <div className="relative overflow-hidden rounded-3xl bg-navy shadow-lift">
+                <Image
+                  src="/images/services-fountain.webp"
+                  alt={locale === "ar" ? "فونتان — تسويق وإبداع وبرمجيات من منصة واحدة" : "Fontain — marketing, creative and software from one platform"}
+                  width={1600}
+                  height={900}
+                  sizes="(min-width: 1024px) 40vw, 100vw"
+                  className="h-auto w-full"
+                />
+              </div>
+            </Reveal>
           </div>
         </div>
         <SpotlightGroup className="grid gap-4 sm:grid-cols-2 lg:col-span-7">

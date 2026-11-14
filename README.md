@@ -36,7 +36,7 @@ proxy.ts               Redirects "/" to the visitor's language (cookie → Accep
 
 | What | Where |
 | --- | --- |
-| Logo | Replace the SVG in `components/Logo.tsx` (`LogoMark`) and `app/icon.svg` |
+| Logo / brand files | Already in place: `public/logo.png` (circular mark), `app/icon.png`, `app/apple-icon.png`, `app/[locale]/opengraph-image.png`. Masters live in `public/brand/` (logo, two banners, identity sheet) and web-optimised banners in `public/images/`. Palette tokens are in `app/globals.css` (`@theme`). |
 | Email, phone, WhatsApp number, address, social links, domain | `lib/site.ts` |
 | Stats figures and sample testimonials | `lib/i18n/en.ts` and `lib/i18n/ar.ts` (look for `TODO`) |
 | Contact form email delivery | Copy `.env.example` to `.env.local` and set `RESEND_API_KEY` + `CONTACT_TO_EMAIL` |

@@ -17,15 +17,15 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
       <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
         <div
           className="blob"
-          style={{ width: 520, height: 520, top: -140, insetInlineStart: -120, background: "#bfe0ff", "--dur": "24s" } as CSSProperties}
+          style={{ width: 520, height: 520, top: -140, insetInlineStart: -120, background: "#c9e9ff", "--dur": "24s" } as CSSProperties}
         />
         <div
           className="blob"
-          style={{ width: 460, height: 460, top: 120, insetInlineEnd: -160, background: "#dcd6ff", "--dur": "28s", "--delay": "-6s" } as CSSProperties}
+          style={{ width: 460, height: 460, top: 120, insetInlineEnd: -160, background: "#c6f1ec", "--dur": "28s", "--delay": "-6s" } as CSSProperties}
         />
         <div
           className="blob"
-          style={{ width: 380, height: 380, bottom: -160, insetInlineStart: "35%", background: "#c6f7ff", "--dur": "26s", "--delay": "-12s" } as CSSProperties}
+          style={{ width: 380, height: 380, bottom: -160, insetInlineStart: "35%", background: "#c9f7ff", "--dur": "26s", "--delay": "-12s" } as CSSProperties}
         />
       </div>
 
@@ -33,7 +33,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
         {/* Copy */}
         <div className="lg:col-span-6">
           <span className="eyebrow rise" style={v(0)}>
-            <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-brand" />
+            <span className="pulse-dot inline-block h-1.5 w-1.5 rounded-full bg-teal" />
             {h.badge}
           </span>
           <h1 className="rise mt-6 text-balance text-5xl font-extrabold leading-[1.05] tracking-tight text-ink sm:text-6xl lg:text-7xl" style={v(1)}>
@@ -53,7 +53,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
           </div>
           <div className="rise mt-14 hidden items-center gap-3 text-xs font-medium text-muted lg:flex" style={v(5)}>
             <span className="grid h-8 w-5 place-items-start justify-center rounded-full border border-line pt-1.5">
-              <span className="scroll-dot block h-1.5 w-1.5 rounded-full bg-brand" />
+              <span className="scroll-dot block h-1.5 w-1.5 rounded-full bg-teal" />
             </span>
             {h.scroll}
           </div>
@@ -92,12 +92,12 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
               <svg viewBox="0 0 320 110" className="mt-4 h-auto w-full" aria-hidden="true">
                 <defs>
                   <linearGradient id="hero-area" x1="0" x2="0" y1="0" y2="1">
-                    <stop offset="0" stopColor="#0B6BFF" stopOpacity="0.28" />
-                    <stop offset="1" stopColor="#0B6BFF" stopOpacity="0" />
+                    <stop offset="0" stopColor="#00B8A9" stopOpacity="0.28" />
+                    <stop offset="1" stopColor="#00B8A9" stopOpacity="0" />
                   </linearGradient>
                   <linearGradient id="hero-line" x1="0" x2="1" y1="0" y2="0">
-                    <stop offset="0" stopColor="#0B6BFF" />
-                    <stop offset="1" stopColor="#00D1FF" />
+                    <stop offset="0" stopColor="#00B8A9" />
+                    <stop offset="1" stopColor="#00D4FF" />
                   </linearGradient>
                 </defs>
                 <path d="M0,92 C30,88 50,70 85,74 S140,42 180,48 S240,22 320,8 L320,110 L0,110 Z" fill="url(#hero-area)" />
@@ -109,7 +109,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
                   strokeLinecap="round"
                   className="chart-line"
                 />
-                <circle cx="320" cy="8" r="5" fill="#0B6BFF" className="chart-dot" />
+                <circle cx="320" cy="8" r="5" fill="#00B8A9" className="chart-dot" />
               </svg>
             </div>
 
@@ -119,7 +119,7 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
               style={{ "--delay": "0s", "--r": "-2deg" } as CSSProperties}
             >
               <div className="flex items-center gap-3">
-                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-brand to-aqua text-white">
+                <span className="grid h-10 w-10 shrink-0 place-items-center rounded-xl bg-gradient-to-br from-teal to-cyan text-white">
                   <TrendingUp size={18} aria-hidden="true" />
                 </span>
                 <div>
@@ -149,17 +149,17 @@ export default function Hero({ locale, dict }: { locale: Locale; dict: Dictionar
 
             {/* Floating: AI video */}
             <div
-              className="float absolute -end-1 top-[70%] w-40 -translate-y-1/2 rounded-2xl bg-ink p-3 text-white shadow-lift sm:end-0 sm:top-[62%] sm:w-44"
+              className="float absolute -end-1 top-[70%] w-40 -translate-y-1/2 rounded-2xl bg-navy p-3 text-white shadow-lift sm:end-0 sm:top-[62%] sm:w-44"
               style={{ "--delay": "0.7s", "--dur": "6.5s", "--r": "2deg" } as CSSProperties}
             >
-              <div className="grid aspect-video place-items-center rounded-xl bg-gradient-to-br from-violet via-brand to-aqua">
+              <div className="grid aspect-video place-items-center rounded-xl bg-gradient-to-br from-navy-2 via-blue to-cyan">
                 <span className="grid h-9 w-9 place-items-center rounded-full bg-white/20 backdrop-blur">
                   <Play size={16} className="ms-0.5 fill-white" aria-hidden="true" />
                 </span>
               </div>
               <p className="mt-2.5 text-[11px] font-semibold">{c.video}</p>
               <div className="mt-1.5 h-1.5 w-full overflow-hidden rounded-full bg-white/15">
-                <div className="progress-anim h-full rounded-full bg-gradient-to-r from-aqua to-brand" />
+                <div className="progress-anim h-full rounded-full bg-gradient-to-r from-cyan to-teal" />
               </div>
               <p className="mt-1 text-[10px] text-white/60">{c.rendering}</p>
             </div>

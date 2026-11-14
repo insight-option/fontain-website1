@@ -25,8 +25,8 @@ export default async function ServicesPage({ params }: Props) {
       <section className="relative overflow-hidden pt-36 pb-16 lg:pt-44">
         <div className="bg-grid absolute inset-0 -z-10" aria-hidden="true" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="blob" style={{ width: 460, height: 460, top: -200, insetInlineEnd: -140, background: "#dcd6ff" }} />
-          <div className="blob" style={{ width: 400, height: 400, top: -120, insetInlineStart: -160, background: "#bfe0ff", animationDelay: "-8s" }} />
+          <div className="blob" style={{ width: 460, height: 460, top: -200, insetInlineEnd: -140, background: "#c6f1ec" }} />
+          <div className="blob" style={{ width: 400, height: 400, top: -120, insetInlineStart: -160, background: "#c9e9ff", animationDelay: "-8s" }} />
         </div>
         <div className="container-x">
           <SectionHeading as="h1" eyebrow={dict.services.eyebrow} title={dict.services.pageTitle} subtitle={dict.services.pageSubtitle} />

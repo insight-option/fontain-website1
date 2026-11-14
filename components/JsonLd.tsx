@@ -14,7 +14,8 @@ export default function JsonLd({ locale }: { locale: Locale }) {
         name,
         alternateName: locale === "ar" ? site.name : site.nameAr,
         url: `${baseUrl}/${locale}`,
-        logo: `${baseUrl}/icon.svg`,
+        logo: `${baseUrl}/logo.png`,
+        image: `${baseUrl}/images/brand-hologram.webp`,
         email: site.email,
         telephone: site.phone,
         address: {

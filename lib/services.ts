@@ -37,7 +37,7 @@ export const services: Service[] = [
     slug: "digital-marketing",
     group: "marketing",
     icon: "strategy",
-    accent: ["#0B6BFF", "#00D1FF"],
+    accent: ["#00B8A9", "#00D4FF"],
     title: { en: "Digital Marketing & Strategy", ar: "التسويق الرقمي والاستراتيجية" },
     short: {
       en: "Full-funnel growth strategy, from positioning to performance.",
@@ -80,7 +80,7 @@ export const services: Service[] = [
     slug: "paid-advertising",
     group: "marketing",
     icon: "ads",
-    accent: ["#7C5CFF", "#0B6BFF"],
+    accent: ["#1D7CF2", "#00D4FF"],
     title: { en: "Paid Social & Digital Ads", ar: "الإعلانات الممولة والرقمية" },
     short: {
       en: "Meta, Google, TikTok and Snapchat campaigns built to convert.",
@@ -123,7 +123,7 @@ export const services: Service[] = [
     slug: "social-media-management",
     group: "marketing",
     icon: "social",
-    accent: ["#FF4D8D", "#FF8A3D"],
+    accent: ["#0B1D33", "#1D7CF2"],
     title: { en: "Social Media Management", ar: "إدارة حسابات التواصل الاجتماعي" },
     short: {
       en: "Instagram, Facebook, TikTok and LinkedIn — managed like a brand should be.",
@@ -209,7 +209,7 @@ export const services: Service[] = [
     slug: "email-marketing",
     group: "marketing",
     icon: "email",
-    accent: ["#F59E0B", "#FF5E62"],
+    accent: ["#F59E0B", "#FBBF24"],
     title: { en: "Email Marketing & Automation", ar: "التسويق عبر البريد الإلكتروني والأتمتة" },
     short: {
       en: "Newsletters, lifecycle flows and campaigns that people actually open.",
@@ -252,7 +252,7 @@ export const services: Service[] = [
     slug: "ai-video-production",
     group: "creative",
     icon: "video",
-    accent: ["#FF2D55", "#7C5CFF"],
+    accent: ["#0B1D33", "#00B8A9"],
     title: { en: "AI Video Production", ar: "إنتاج الفيديو بالذكاء الاصطناعي" },
     short: {
       en: "Cinematic ads, product films and reels — produced with AI, finished by humans.",
@@ -295,7 +295,7 @@ export const services: Service[] = [
     slug: "design-branding",
     group: "creative",
     icon: "design",
-    accent: ["#00D1FF", "#7C5CFF"],
+    accent: ["#00D4FF", "#1D7CF2"],
     title: { en: "Graphic Design & Branding", ar: "التصميم الجرافيكي والهوية البصرية" },
     short: {
       en: "Logos, identities, social visuals and campaigns that look world-class.",
@@ -338,7 +338,7 @@ export const services: Service[] = [
     slug: "web-development",
     group: "tech",
     icon: "web",
-    accent: ["#0B6BFF", "#7C5CFF"],
+    accent: ["#1D7CF2", "#0B1D33"],
     title: { en: "Website Development", ar: "تطوير المواقع الإلكترونية" },
     short: {
       en: "Blazing-fast, bilingual websites and e-commerce stores that convert.",
@@ -381,7 +381,7 @@ export const services: Service[] = [
     slug: "mobile-apps",
     group: "tech",
     icon: "mobile",
-    accent: ["#00B8A9", "#0B6BFF"],
+    accent: ["#00B8A9", "#1D7CF2"],
     title: { en: "Mobile App Development", ar: "تطوير تطبيقات الجوال" },
     short: {
       en: "iOS and Android apps your customers love to use.",
@@ -424,7 +424,7 @@ export const services: Service[] = [
     slug: "custom-software-crm-erp",
     group: "tech",
     icon: "software",
-    accent: ["#7C5CFF", "#FF4D8D"],
+    accent: ["#15375C", "#00D4FF"],
     title: { en: "Custom Software, CRM & ERP", ar: "البرمجيات المخصصة وأنظمة CRM وERP" },
     short: {
       en: "Systems built around how your business actually runs.",

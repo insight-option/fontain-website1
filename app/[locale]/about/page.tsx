@@ -1,4 +1,5 @@
 import type { Metadata } from "next";
+import Image from "next/image";
 import type { CSSProperties } from "react";
 import { ArrowRight, Compass, Eye, Gem, MapPin, Zap } from "lucide-react";
 import Reveal from "@/components/Reveal";
@@ -20,7 +21,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
 }
 
 const valueIcons = [Gem, Eye, Zap, Compass];
-const valueColors = ["#0B6BFF", "#7C5CFF", "#F59E0B", "#00B8A9"];
+const valueColors = ["#00B8A9", "#1D7CF2", "#F59E0B", "#0B1D33"];
 
 export default async function AboutPage({ params }: Props) {
   const { locale: raw } = await params;
@@ -33,11 +34,24 @@ export default async function AboutPage({ params }: Props) {
       <section className="relative overflow-hidden pt-36 pb-16 lg:pt-44 lg:pb-20">
         <div className="bg-grid absolute inset-0 -z-10" aria-hidden="true" />
         <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-          <div className="blob" style={{ width: 480, height: 480, top: -220, insetInlineStart: -140, background: "#bfe0ff" }} />
-          <div className="blob" style={{ width: 420, height: 420, top: 0, insetInlineEnd: -180, background: "#dcd6ff", animationDelay: "-9s" }} />
+          <div className="blob" style={{ width: 480, height: 480, top: -220, insetInlineStart: -140, background: "#c9e9ff" }} />
+          <div className="blob" style={{ width: 420, height: 420, top: 0, insetInlineEnd: -180, background: "#c6f1ec", animationDelay: "-9s" }} />
         </div>
         <div className="container-x">
           <SectionHeading as="h1" eyebrow={a.eyebrow} title={a.title} subtitle={a.intro} align="start" className="max-w-4xl" />
+          <Reveal from="scale" delay={200} className="mt-14">
+            <div className="relative overflow-hidden rounded-[2.5rem] bg-navy shadow-lift">
+              <Image
+                src="/images/services-fountain.webp"
+                alt={locale === "ar" ? "فونتان — استوديو نمو يجمع التسويق والإبداع والبرمجيات" : "Fontain — a growth studio uniting marketing, creative and software"}
+                width={1600}
+                height={900}
+                sizes="(min-width: 1280px) 1216px, 100vw"
+                className="h-auto w-full"
+                priority
+              />
+            </div>
+          </Reveal>
         </div>
       </section>
 
@@ -45,10 +59,10 @@ export default async function AboutPage({ params }: Props) {
       <section className="py-12 lg:py-16">
         <div className="container-x">
           <Reveal from="scale">
-            <div className="relative overflow-hidden rounded-[2.5rem] px-6 py-14 text-white sm:px-12 lg:px-16 lg:py-20" style={{ background: "linear-gradient(120deg, #0B6BFF 0%, #4C7DFF 45%, #7C5CFF 100%)" }}>
+            <div className="relative overflow-hidden rounded-[2.5rem] px-6 py-14 text-white sm:px-12 lg:px-16 lg:py-20" style={{ background: "linear-gradient(120deg, #0B1D33 0%, #15375C 55%, #0A8F85 100%)" }}>
               <div className="bg-grid absolute inset-0 opacity-30 invert" aria-hidden="true" />
               <div aria-hidden="true" className="absolute inset-0 overflow-hidden">
-                <div className="blob" style={{ width: 420, height: 420, top: -200, insetInlineEnd: -120, background: "#00D1FF", opacity: 0.5 }} />
+                <div className="blob" style={{ width: 420, height: 420, top: -200, insetInlineEnd: -120, background: "#00D4FF", opacity: 0.45 }} />
               </div>
               <div className="relative max-w-3xl">
                 <span className="inline-flex rounded-full border border-white/30 bg-white/10 px-3 py-1 text-xs font-semibold uppercase tracking-wide backdrop-blur">{a.missionTitle}</span>
@@ -96,7 +110,7 @@ export default async function AboutPage({ params }: Props) {
             <div className="card relative h-full overflow-hidden p-8 sm:p-10">
               <div className="bg-dots absolute inset-0 opacity-60" aria-hidden="true" />
               <div className="relative">
-                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-brand to-aqua text-white">
+                <span className="grid h-12 w-12 place-items-center rounded-2xl bg-gradient-to-br from-teal to-cyan text-white">
                   <MapPin size={22} aria-hidden="true" />
                 </span>
                 <h2 className="mt-5 text-2xl font-extrabold tracking-tight text-ink">{a.locationTitle}</h2>

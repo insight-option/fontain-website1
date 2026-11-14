@@ -53,7 +53,7 @@ export default async function HomePage({ params }: Props) {
         </div>
       </section>
 
-      <WhyUs dict={dict} />
+      <WhyUs dict={dict} locale={locale} />
       <Stats dict={dict} />
       <Process dict={dict} />
       <Testimonials dict={dict} />

@@ -43,7 +43,7 @@ export default function ContactForm({ locale, form, serviceOptions }: Props) {
   if (status === "success") {
     return (
       <div role="status" className="card flex flex-col items-center gap-4 p-10 text-center">
-        <span className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-brand to-aqua text-white">
+        <span className="grid h-16 w-16 place-items-center rounded-full bg-gradient-to-br from-teal to-cyan text-white">
           <CheckCircle2 size={32} aria-hidden="true" />
         </span>
         <p className="max-w-md text-pretty text-lg font-semibold text-ink">{f.success}</p>

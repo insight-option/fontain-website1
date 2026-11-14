@@ -1,3 +1,4 @@
+import Image from "next/image";
 import Link from "next/link";
 import { ArrowRight, MessageCircle } from "lucide-react";
 import Reveal from "./Reveal";
@@ -11,31 +12,33 @@ export default function CTA({ locale, dict }: { locale: Locale; dict: Dictionary
     <section className="relative py-12 lg:py-20">
       <div className="container-x">
         <Reveal from="scale">
-          <div className="relative overflow-hidden rounded-[2.5rem] px-6 py-16 text-center text-white sm:px-12 lg:py-24">
-            <div
-              aria-hidden="true"
-              className="absolute inset-0 -z-10"
-              style={{ background: "linear-gradient(120deg, #0B6BFF 0%, #4C7DFF 40%, #7C5CFF 100%)" }}
+          <div className="relative min-h-[460px] overflow-hidden rounded-[2.5rem] bg-navy text-white lg:min-h-[500px]">
+            {/* Brand hologram artwork: the logo sits on the right of the image, so copy stays on the physical left in both directions */}
+            <Image
+              src="/images/brand-hologram.webp"
+              alt=""
+              fill
+              sizes="(min-width: 1280px) 1216px, 100vw"
+              className="object-cover object-[22%_50%] lg:object-center"
             />
-            <div aria-hidden="true" className="absolute inset-0 -z-10 overflow-hidden">
-              <div className="blob" style={{ width: 460, height: 460, top: -220, insetInlineStart: -120, background: "#00D1FF", opacity: 0.55 }} />
-              <div className="blob" style={{ width: 420, height: 420, bottom: -240, insetInlineEnd: -80, background: "#FF4D8D", opacity: 0.45, animationDelay: "-9s" }} />
-              <div className="bg-grid absolute inset-0 opacity-30 invert" />
-            </div>
-            <h2 className="text-balance text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">{c.title}</h2>
-            <p className="mx-auto mt-5 max-w-xl text-pretty text-lg text-white/85">{c.subtitle}</p>
-            <div className="mt-9 flex flex-wrap items-center justify-center gap-3">
-              <Link
-                href={localePath(locale, "/contact")}
-                className="btn bg-white px-7 py-3.5 text-base text-brand shadow-[0_12px_30px_-10px_rgb(0_0_0/0.35)] hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_rgb(0_0_0/0.4)]"
-              >
-                {c.button}
-                <ArrowRight size={18} className="rtl:-scale-x-100" aria-hidden="true" />
-              </Link>
-              <a href={waLink(waMessage)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp px-7 py-3.5 text-base">
-                <MessageCircle size={18} aria-hidden="true" />
-                {c.whatsapp}
-              </a>
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-r from-navy via-navy/85 to-navy/10" />
+            <div aria-hidden="true" className="absolute inset-0 bg-gradient-to-t from-navy/70 via-transparent to-transparent" />
+            <div className="relative mr-auto flex min-h-[460px] max-w-xl flex-col justify-center px-7 py-16 sm:px-12 lg:min-h-[500px] lg:px-16">
+              <h2 className="text-balance text-4xl font-extrabold tracking-tight sm:text-5xl lg:text-6xl">{c.title}</h2>
+              <p className="mt-5 max-w-md text-pretty text-lg text-white/80">{c.subtitle}</p>
+              <div className="mt-9 flex flex-wrap items-center gap-3">
+                <Link
+                  href={localePath(locale, "/contact")}
+                  className="btn bg-white px-7 py-3.5 text-base text-navy shadow-[0_12px_30px_-10px_rgb(0_0_0/0.45)] hover:-translate-y-0.5 hover:shadow-[0_18px_40px_-12px_rgb(0_212_255/0.45)]"
+                >
+                  {c.button}
+                  <ArrowRight size={18} className="rtl:-scale-x-100" aria-hidden="true" />
+                </Link>
+                <a href={waLink(waMessage)} target="_blank" rel="noopener noreferrer" className="btn-whatsapp px-7 py-3.5 text-base">
+                  <MessageCircle size={18} aria-hidden="true" />
+                  {c.whatsapp}
+                </a>
+              </div>
             </div>
           </div>
         </Reveal>

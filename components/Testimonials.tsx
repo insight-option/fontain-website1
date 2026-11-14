@@ -21,7 +21,7 @@ export default function Testimonials({ dict }: { dict: Dictionary }) {
                 </div>
                 <blockquote className="mt-4 flex-1 text-pretty text-base leading-relaxed text-ink-2">“{item.quote}”</blockquote>
                 <figcaption className="mt-6 flex items-center gap-3 border-t border-line pt-5">
-                  <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-brand to-violet text-sm font-bold text-white">
+                  <span className="grid h-10 w-10 place-items-center rounded-full bg-gradient-to-br from-navy-2 to-teal text-sm font-bold text-white">
                     {item.name.charAt(0)}
                   </span>
                   <div>

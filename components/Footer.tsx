@@ -67,9 +67,12 @@ export default function Footer({ locale, dict }: { locale: Locale; dict: Diction
           {/* Brand */}
           <div className="lg:col-span-4">
             <Link href={localePath(locale)} aria-label="Fontain">
-              <Logo locale={locale} size={40} />
+              <Logo locale={locale} size={44} />
             </Link>
-            <p className="mt-5 max-w-sm text-pretty text-sm leading-relaxed text-muted">{dict.footer.tagline}</p>
+            <p className="mt-3 text-xs font-semibold uppercase tracking-[0.18em] text-brand">
+              {locale === "ar" ? "حلول رقمية. نمو. نتائج حقيقية." : "Digital. Tech. Growth."}
+            </p>
+            <p className="mt-4 max-w-sm text-pretty text-sm leading-relaxed text-muted">{dict.footer.tagline}</p>
             <ul className="mt-6 flex items-center gap-2">
               {socials.map(({ href, label, Icon }) => (
                 <li key={label}>
